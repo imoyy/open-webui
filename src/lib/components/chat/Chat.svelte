@@ -1919,7 +1919,7 @@
 	<div
 		class="h-screen max-h-[100dvh] px-2 pt-2 {$showSidebar
 			? 'md:max-w-[calc(100%-260px)]'
-			: ''} w-full max-w-full flex flex-col"
+			: ''} w-full max-w-full flex flex-col items-center"
 	>
 		{#if $settings?.backgroundImageUrl ?? null}
 			<div
@@ -1972,7 +1972,8 @@
 				<div class="flex flex-col flex-auto z-10 w-full">
 					{#if $settings?.landingPageMode === 'chat' || createMessagesList(history.currentId).length > 0}
 						<div
-							class=" pb-2.5 flex flex-col justify-between w-full flex-auto overflow-auto h-0 max-w-full z-10 scrollbar-hidden"
+							class="pb-2.5 flex flex-col justify-between w-full max-w-3xl mx-auto overflow-auto h-0 z-10 scrollbar-hidden"
+							style="margin: 0 auto;"
 							id="messages-container"
 							bind:this={messagesContainerElement}
 							on:scroll={(e) => {
@@ -1981,7 +1982,7 @@
 									messagesContainerElement.clientHeight + 5;
 							}}
 						>
-							<div class=" h-full w-full flex flex-col">
+							<div class="h-full w-full flex flex-col">
 								<Messages
 									chatId={$chatId}
 									bind:history
@@ -2030,7 +2031,7 @@
 							</div>
 						</div>
 
-						<div class=" pb-[1.6rem]">
+						<div class="pb-[1.6rem]">
 							<MessageInput
 								{history}
 								{selectedModels}

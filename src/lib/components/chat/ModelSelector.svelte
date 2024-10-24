@@ -38,7 +38,7 @@
 	{#each selectedModels as selectedModel, selectedModelIdx}
 		<div class="flex w-full max-w-fit">
 			<div class="overflow-hidden w-full">
-				<div class="mr-1 max-w-full">
+				<div class="mr-1 max-w-full hover:bg-gray-100 dark:hover:bg-950">
 					<Selector
 						placeholder={$i18n.t('Select a model')}
 						items={$models.map((model) => ({
