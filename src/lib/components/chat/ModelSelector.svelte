@@ -38,7 +38,7 @@
 	{#each selectedModels as selectedModel, selectedModelIdx}
 		<div class="flex w-full max-w-fit">
 			<div class="overflow-hidden w-full">
-				<div class="mr-1 max-w-full hover:bg-gray-100 dark:hover:bg-950">
+				<div class="mr-1 max-w-full">
 					<Selector
 						placeholder={$i18n.t('Select a model')}
 						items={$models.map((model) => ({
@@ -56,7 +56,7 @@
 
 			{#if selectedModelIdx === 0}
 				<div
-					class="  self-center mx-1 disabled:text-gray-600 disabled:hover:text-gray-600 -translate-y-[0.5px]"
+					class="  self-center mx-1 disabled:text-gray-600 disabled:hover:text-gray-600 -translate-y-[0.5px] hover:bg-gray-50 dark:hover:bg-gray-850"
 				>
 					<Tooltip content={$i18n.t('Add Model')}>
 						<button

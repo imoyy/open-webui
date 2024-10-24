@@ -54,7 +54,7 @@
 			>
 				<button
 					id="sidebar-toggle-button"
-					class="cursor-pointer px-2 py-2 flex rounded-xl hover:bg-gray-50 dark:hover:bg-gray-850 transition"
+					class="cursor-pointer px-2 py-3 flex rounded-xl hover:bg-gray-50 dark:hover:bg-gray-850 transition"
 					on:click={() => {
 						showSidebar.set(!$showSidebar);
 					}}
@@ -101,8 +101,8 @@
 									<rect
 										x="20"
 										y="20"
-										width="60"
-										height="60"
+										width="80"
+										height="80"
 										rx="15"
 										ry="15"
 										fill="#f0f0f0"
@@ -113,7 +113,7 @@
 									<circle cx="40" cy="50" r="4" fill="#333" />
 									<circle cx="40" cy="60" r="4" fill="#333" />
 
-									<rect x="55" y="40" width="10" height="20" fill="#333" />
+									<rect x="55" y="40" width="20" height="30" fill="#333" />
 								</svg>
 							</div>
 						</button>

@@ -348,7 +348,7 @@
 			}}
 		/>
 	{:else}
-		<div class="w-full pt-2 items-center">
+		<div class="w-full px-1 md:px-10 pt-2 items-center">
 			{#key chatId}
 				<div class="w-full max-w-4xl">
 					{#if messages.at(0)?.parentId !== null}
