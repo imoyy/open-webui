@@ -1972,7 +1972,7 @@
 				<div class="flex flex-col flex-auto z-10 w-full">
 					{#if $settings?.landingPageMode === 'chat' || createMessagesList(history.currentId).length > 0}
 						<div
-							class="pb-2.5 flex flex-col justify-between w-full max-w-3xl mx-auto overflow-auto h-0 z-10 scrollbar-hidden"
+							class="pb-2.5 flex flex-col justify-between w-full max-w-3xl mx-auto overflow-auto h-screen z-10 scrollbar-hidden"
 							style="margin: 0 auto;"
 							id="messages-container"
 							bind:this={messagesContainerElement}

@@ -281,7 +281,7 @@
 	>
 		<div class="px-2.5 flex justify-between space-x-1 text-gray-600 dark:text-gray-400">
 			<button
-				class=" cursor-pointer px-2 py-2 flex rounded-xl hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+				class=" cursor-pointer px-2 py-2 flex rounded-xl transition"
 				on:click={() => {
 					showSidebar.set(!$showSidebar);
 				}}

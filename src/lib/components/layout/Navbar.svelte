@@ -60,7 +60,7 @@
 					}}
 					aria-label="Toggle Sidebar"
 				>
-					<div class=" m-auto self-center">
+					<div class=" pt-1 m-auto self-center">
 						<MenuLines />
 					</div>
 				</button>
@@ -93,24 +93,34 @@
 							<div class=" m-auto self-center">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 24 24"
+									viewBox="0 0 100 100"
 									fill="none"
-									stroke="currentColor"
-									stroke-width="2"
-									stroke-linecap="round"
-									stroke-linejoin="round"
 									class="size-6"
+									stroke="black"
 								>
-									<rect x="3" y="3" width="18" height="18" rx="4" ry="4" fill="#3d3d3d" />
-									<rect x="7" y="7" width="6" height="10" fill="#d3d3d3" />
-									<circle cx="10" cy="12" r="1" fill="#3d3d3d" />
+									<rect
+										x="20"
+										y="20"
+										width="60"
+										height="60"
+										rx="15"
+										ry="15"
+										fill="#f0f0f0"
+										stroke="#333"
+										stroke-width="3"
+									/>
+
+									<circle cx="40" cy="50" r="4" fill="#333" />
+									<circle cx="40" cy="60" r="4" fill="#333" />
+
+									<rect x="55" y="40" width="10" height="20" fill="#333" />
 								</svg>
 							</div>
 						</button>
 					</Menu>
 				{/if}
 
-				<Tooltip content={$i18n.t('New Chat')}>
+<!-- 				<Tooltip content={$i18n.t('New Chat')}>
 					<button
 						id="new-chat-button"
 						class=" flex {$showSidebar
@@ -125,8 +135,6 @@
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
-								width="24"
-								height="24"
 								fill="none"
 								stroke="currentColor"
 								stroke-width="2"
@@ -140,7 +148,7 @@
 							</svg>
 						</div>
 					</button>
-				</Tooltip>
+				</Tooltip> -->
 
 				{#if $user !== undefined}
 					<UserMenu
