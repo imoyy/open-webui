@@ -63,9 +63,7 @@
 		}
 
 		messages = _messages;
-	} else
-		messages = [];
-	}
+	} else messages = [];
 
 	$: if (autoScroll && bottomPadding) {
 		(async () => {
