@@ -1917,7 +1917,7 @@
 
 {#if !chatIdProp || (loaded && chatIdProp)}
 	<div
-		class="h-screen max-h-[100dvh] {$showSidebar
+		class="h-screen max-h-[100dvh] px-2 pt-2 {$showSidebar
 			? 'md:max-w-[calc(100%-260px)]'
 			: ''} w-full max-w-full flex flex-col"
 	>
@@ -1930,7 +1930,7 @@
 			/>
 
 			<div
-				class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-white to-white/85 dark:from-gray-900 dark:to-[#171717]/90 z-0"
+				class="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-white to-white/85 dark:from-gray-900 dark:to-[#212121]/90 z-0"
 			/>
 		{/if}
 

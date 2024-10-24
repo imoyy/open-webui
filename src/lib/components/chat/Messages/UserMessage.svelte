@@ -86,7 +86,7 @@
 	});
 </script>
 
-<div class=" flex w-full user-message" dir={$settings.chatDirection} id="message-{message.id}">
+<div class="flex justify-center w-full user-message" dir={$settings.chatDirection} id="message-{message.id}">
 	{#if !($settings?.chatBubble ?? true)}
 		<ProfileImage
 			src={message.user
@@ -94,7 +94,7 @@
 				: (user?.profile_image_url ?? '/user.png')}
 		/>
 	{/if}
-	<div class="w-full w-0 pl-1">
+	<div class="max-w-lg w-full pl-1">
 		{#if !($settings?.chatBubble ?? true)}
 			<div>
 				<Name>
@@ -206,7 +206,7 @@
 					<div class="flex {($settings?.chatBubble ?? true) ? 'justify-end pb-1' : 'w-full'}">
 						<div
 							class="rounded-3xl {($settings?.chatBubble ?? true)
-								? `max-w-[90%] px-5 py-2  bg-gray-50 dark:bg-gray-850 ${
+								? `max-w-lg px-5 py-2  bg-gray-50 dark:bg-gray-850 ${
 										message.files ? 'rounded-tr-lg' : ''
 									}`
 								: ' w-full'}"

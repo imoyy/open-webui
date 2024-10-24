@@ -93,37 +93,21 @@
 							<div class=" m-auto self-center">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
 									viewBox="0 0 24 24"
-									stroke-width="1.5"
+									fill="none"
 									stroke="currentColor"
-									class="size-5"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="size-6"
 								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-									/>
+									<rect x="3" y="3" width="18" height="18" rx="4" ry="4" fill="#3d3d3d" />
+									<rect x="7" y="7" width="6" height="10" fill="#d3d3d3" />
+									<circle cx="10" cy="12" r="1" fill="#3d3d3d" />
 								</svg>
 							</div>
 						</button>
 					</Menu>
-				{/if}
-
-				{#if !$mobile}
-					<Tooltip content={$i18n.t('Controls')}>
-						<button
-							class=" flex cursor-pointer px-2 py-2 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-850 transition"
-							on:click={async () => {
-								await showControls.set(!$showControls);
-							}}
-							aria-label="Controls"
-						>
-							<div class=" m-auto self-center">
-								<AdjustmentsHorizontal className=" size-5" strokeWidth="0.5" />
-							</div>
-						</button>
-					</Tooltip>
 				{/if}
 
 				<Tooltip content={$i18n.t('New Chat')}>
@@ -140,16 +124,19 @@
 						<div class=" m-auto self-center">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 20 20"
-								fill="currentColor"
-								class="w-5 h-5"
+								viewBox="0 0 24 24"
+								width="24"
+								height="24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="size-6"
 							>
-								<path
-									d="M5.433 13.917l1.262-3.155A4 4 0 017.58 9.42l6.92-6.918a2.121 2.121 0 013 3l-6.92 6.918c-.383.383-.84.685-1.343.886l-3.154 1.262a.5.5 0 01-.65-.65z"
-								/>
-								<path
-									d="M3.5 5.75c0-.69.56-1.25 1.25-1.25H10A.75.75 0 0010 3H4.75A2.75 2.75 0 002 5.75v9.5A2.75 2.75 0 004.75 18h9.5A2.75 2.75 0 0017 15.25V10a.75.75 0 00-1.5 0v5.25c0 .69-.56 1.25-1.25 1.25h-9.5c-.69 0-1.25-.56-1.25-1.25v-9.5z"
-								/>
+								<rect x="3" y="3" width="18" height="18" rx="4" ry="4" fill="#3d3d3d" />
+								<path d="M14 3l7 7-8.5 8.5L5 21l2.5-7.5L14 3z" fill="#d3d3d3" />
+								<line x1="16" y1="5" x2="19" y2="8" stroke="#3d3d3d" />
 							</svg>
 						</div>
 					</button>
@@ -172,7 +159,7 @@
 							<div class=" self-center">
 								<img
 									src={$user.profile_image_url}
-									class="size-6 object-cover rounded-full"
+									class="size-8 object-cover rounded-full"
 									alt="User profile"
 									draggable="false"
 								/>

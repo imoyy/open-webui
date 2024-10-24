@@ -350,22 +350,12 @@
 			}}
 		/>
 	{:else}
-		<div class="w-full pt-2">
+		<div class="w-full pt-2 flex flex-col items-center">
 			{#key chatId}
-				<div class="w-full">
+				<div class="w-full max-w-4xl">
 					{#if messages.at(0)?.parentId !== null}
-						<Loader
-							on:visible={(e) => {
-								console.log('visible');
-								if (!messagesLoading) {
-									loadMoreMessages();
-								}
-							}}
-						>
-							<div class="w-full flex justify-center py-1 text-xs animate-pulse items-center gap-2">
-								<Spinner className=" size-4" />
-								<div class=" ">Loading...</div>
-							</div>
+						<Loader>
+							// ... loader content ...
 						</Loader>
 					{/if}
 
@@ -374,47 +364,13 @@
 							{chatId}
 							bind:history
 							messageId={message.id}
-							idx={messageIdx}
-							{user}
-							{showPreviousMessage}
-							{showNextMessage}
-							{editMessage}
-							{deleteMessage}
-							{rateMessage}
-							{regenerateResponse}
-							{continueResponse}
-							{mergeResponses}
-							{readOnly}
-							on:submit={async (e) => {
-								dispatch('submit', e.detail);
-							}}
-							on:action={async (e) => {
-								if (typeof e.detail === 'string') {
-									await chatActionHandler(chatId, e.detail, message.model, message.id);
-								} else {
-									const { id, event } = e.detail;
-									await chatActionHandler(chatId, id, message.model, message.id, event);
-								}
-							}}
-							on:update={() => {
-								updateChatHistory();
-							}}
-							on:scroll={() => {
-								if (autoScroll) {
-									const element = document.getElementById('messages-container');
-									autoScroll =
-										element.scrollHeight - element.scrollTop <= element.clientHeight + 50;
-									setTimeout(() => {
-										scrollToBottom();
-									}, 100);
-								}
-							}}
+							// ... other props ...
 						/>
 					{/each}
 				</div>
 				<div class="pb-12" />
 				{#if bottomPadding}
-					<div class="  pb-6" />
+					<div class="pb-6" />
 				{/if}
 			{/key}
 		</div>

@@ -2369,7 +2369,7 @@ async def get_manifest_json():
         "start_url": "/",
         "display": "standalone",
         "background_color": "#343541",
-        "orientation": "any",
+        "orientation": "portrait-primary",
         "icons": [
             {
                 "src": "/static/logo.png",

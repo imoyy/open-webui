@@ -231,14 +231,14 @@
 >
 	<DropdownMenu.Trigger class="relative w-full font-primary" aria-label={placeholder}>
 		<div
-			class="flex w-full text-left px-0.5 outline-none bg-transparent truncate text-lg font-medium placeholder-gray-400 focus:outline-none"
+			class="flex w-full text-left px-0.5 outline-none bg-transparent truncate text-lg font-bold placeholder-gray-400 focus:outline-none"
 		>
 			{#if selectedModel}
 				{selectedModel.label}
 			{:else}
 				{placeholder}
 			{/if}
-			<ChevronDown className=" self-center ml-2 size-3" strokeWidth="2.5" />
+			<ChevronDown className=" self-center ml-2 mt-1 size-4" strokeWidth="2.5" />
 		</div>
 	</DropdownMenu.Trigger>
 
@@ -288,7 +288,7 @@
 				{#each filteredItems as item, index}
 					<button
 						aria-label="model-item"
-						class="flex w-full text-left font-medium line-clamp-1 select-none items-center rounded-button py-2 pl-3 pr-1.5 text-sm text-gray-700 dark:text-gray-100 outline-none transition-all duration-75 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg cursor-pointer data-[highlighted]:bg-muted {index ===
+						class="flex w-full text-left font-medium line-clamp-1 select-none items-center rounded-button py-2 pl-3 pr-1.5 text-sm text-gray-[#9b9b9b] dark:text-gray-100 outline-none transition-all duration-75 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg cursor-pointer data-[highlighted]:bg-muted {index ===
 						selectedModelIdx
 							? 'bg-gray-100 dark:bg-gray-800 group-hover:bg-transparent'
 							: ''}"
