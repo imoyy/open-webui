@@ -44,7 +44,7 @@
 <div
 	class="flex flex-col justify-between px-0 md:px-10 mb-3 w-full {($settings?.widescreenMode ?? null)
 		? 'max-w-full'
-		: 'max-w-3xl'} rounded-lg group"
+		: 'max-w-3xl'} mx-auto rounded-lg group"
 >
 	{#if history.messages[messageId]}
 		{#if history.messages[messageId].role === 'user'}
