@@ -477,7 +477,7 @@
 		id="message-{message.id}"
 		dir={$settings.chatDirection}
 	>
-		<div class={`flex-shrink-0 mt-1 ${($settings?.chatDirection ?? 'LTR') === 'LTR' ? 'mr-2' : 'ml-2'}`}>
+		<div class={`flex-shrink-0 mt-1 ${($settings?.chatDirection ?? 'LTR') === 'LTR' ? 'mr-3' : 'ml-3'}`}>
 			<ProfileImage
 				src={model?.info?.meta?.profile_image_url ??
 					($i18n.language === 'dg-DG' ? `/doge.png` : `${WEBUI_BASE_URL}/static/favicon.png`)}
