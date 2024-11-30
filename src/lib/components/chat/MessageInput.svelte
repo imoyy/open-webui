@@ -405,7 +405,7 @@
 		</div>
 
 		<div class="{transparentBackground ? 'bg-transparent' : 'bg-white dark:bg-dark-700'} ">
-			<div class="ml-3 w-full md:max-w-3xl px-8 mx-auto inset-x-0">
+			<div class="w-full md:max-w-3xl px-8 mx-auto inset-x-0">
 				<div class="">
 					<input
 						bind:this={filesInputElement}
