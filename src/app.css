@@ -156,6 +156,18 @@ input[type='number'] {
 	width: 100%;
 }
 
+.cm-gutter {
+	display: none;
+}
+
+.cm-gutters {
+	display: none;
+}
+
+.cm-lineNumbers {
+	display: none;
+}
+
 .cm-scroller {
 	@apply scrollbar-hidden;
 }
