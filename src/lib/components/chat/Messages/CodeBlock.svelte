@@ -302,7 +302,7 @@ __builtins__.input = input`);
 </script>
 
 <div>
-	<div class="relative {className} flex flex-col rounded-lg border shadow" dir="ltr">
+	<div class="relative {className} flex flex-col rounded-lg border border-white dark:border-dark-800 shadow" dir="ltr">
 		{#if lang === 'mermaid'}
 			{#if mermaidHtml}
 				<SvgPanZoom

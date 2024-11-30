@@ -235,7 +235,7 @@
 		id="model-selector-{id}-button"
 	>
 		<div
-			class="flex w-full text-left px-0.5 outline-none bg-transparent truncate {triggerClassName} justify-between text-black dark:text-[#2f2f2f] font-medium placeholder-gray-400 focus:outline-none"
+			class="flex w-full text-left px-0.5 outline-none bg-transparent truncate {triggerClassName} justify-between text-black dark:text-white font-medium placeholder-gray-400 focus:outline-none"
 		>
 			{#if selectedModel}
 				{selectedModel.label}
@@ -249,7 +249,7 @@
 	<DropdownMenu.Content
 		class=" z-40 {$mobile
 			? `w-full`
-			: `${className}`} max-w-[calc(100vw-1rem)] justify-start rounded-xl  bg-white dark:bg-gray-850 dark:text-white shadow-lg  outline-none"
+			: `${className}`} max-w-[calc(100vw-1rem)] justify-start rounded-xl  bg-white dark:bg-dark:700 dark:text-white shadow-lg  outline-none"
 		transition={flyAndScale}
 		side={$mobile ? 'bottom' : 'bottom-start'}
 		sideOffset={3}
