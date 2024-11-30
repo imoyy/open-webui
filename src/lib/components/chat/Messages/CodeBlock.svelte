@@ -319,7 +319,7 @@ __builtins__.input = input`);
 			</div>
 
 			<div
-				class="sticky {stickyButtonsClassName} mb-1 py-1 pr-2.5 flex items-center justify-end z-10 text-xs text-black dark:text-white"
+				class="sticky {stickyButtonsClassName} mb-1 py-1 pr-2.5 flex items-center justify-end z-9 text-xs text-black dark:text-white"
 			>
 				<div class="flex items-center gap-0.5 translate-y-[1px]">
 					{#if lang.toLowerCase() === 'python' || lang.toLowerCase() === 'py' || (lang === '' && checkPythonCode(code))}

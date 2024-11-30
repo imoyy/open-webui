@@ -2253,10 +2253,10 @@
 					</div>
 				{/if}
 
-				<div class="flex flex-col flex-auto z-10 mx-auto w-full md:max-w-3xl ">
+				<div class="flex flex-col flex-auto z-9 mx-auto w-full md:max-w-3xl ">
 					{#if $settings?.landingPageMode === 'chat' || createMessagesList(history.currentId).length > 0}
 						<div
-							class="pb-2.5 flex flex-col justify-between w-full flex-auto overflow-auto h-0 z-10 scrollbar-hidden"
+							class="pb-2.5 flex flex-col justify-between w-full flex-auto overflow-auto h-0 z-9 scrollbar-hidden"
 							id="messages-container"
 							bind:this={messagesContainerElement}
 							on:scroll={(e) => {
