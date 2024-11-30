@@ -302,7 +302,7 @@ __builtins__.input = input`);
 </script>
 
 <div>
-	<div class="relative {className} flex flex-col rounded-lg border border-white dark:border-dark-800 shadow" dir="ltr">
+	<div class="relative {className} flex flex-col rounded-lg border border-[#f9f9f9] dark:border-dark-800 shadow" dir="ltr">
 		{#if lang === 'mermaid'}
 			{#if mermaidHtml}
 				<SvgPanZoom
@@ -314,7 +314,7 @@ __builtins__.input = input`);
 				<pre class="mermaid">{code}</pre>
 			{/if}
 		{:else}
-			<div class="text-text-300 absolute pl-4 py-1.5 text-xs font-medium dark:text-white">
+			<div class="absolute pl-4 py-1.5 text-xs font-medium dark:text-white">
 				{lang}
 			</div>
 
@@ -327,7 +327,7 @@ __builtins__.input = input`);
 							<div class="run-code-button bg-none border-none p-1 cursor-not-allowed">Running</div>
 						{:else if run}
 							<button
-								class="run-code-button bg-none border-none bg-gray-50 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-800 transition rounded-md px-1.5 py-0.5"
+								class="run-code-button bg-none border-none bg-gray-50 hover:bg-dark-600 dark:bg-dark-700 dark:hover:bg-gray-800 transition rounded-md px-1.5 py-0.5"
 								on:click={async () => {
 									code = _code;
 									await tick();
@@ -339,16 +339,16 @@ __builtins__.input = input`);
 
 					{#if save}
 						<button
-							class="save-code-button bg-none border-none bg-gray-50 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-800 transition rounded-md px-1.5 py-0.5"
+							class="save-code-button bg-none border-none bg-gray-50 hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-800 transition rounded-md px-1.5 py-0.5"
 							on:click={saveCode}
 						>
-							{saved ? $i18n.t('Saved') : $i18n.t('Save')}
+							{saved ? 'Saved': 'Save'}
 						</button>
 					{/if}
 
 					<button
-						class="copy-code-button bg-none border-none bg-gray-50 hover:bg-gray-100 dark:bg-gray-850 dark:hover:bg-gray-800 transition rounded-md px-1.5 py-0.5"
-						on:click={copyCode}>{copied ? $i18n.t('Copied') : $i18n.t('Copy')}</button
+						class="copy-code-button bg-none border-none bg-gray-50 hover:bg-dark-600 dark:bg-dark-700 dark:hover:bg-gray-800 transition rounded-md px-1.5 py-0.5"
+						on:click={copyCode}>{copied ? 'Copied' : 'Copy'}</button
 					>
 				</div>
 			</div>

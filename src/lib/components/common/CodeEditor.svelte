@@ -90,6 +90,11 @@
 				dispatch('change', { value: _value });
 			}
 		}),
+		EditorView.theme({
+    "&": {
+      lineHeight: "1.4"
+    },
+ 	 }),
 		editorTheme.of([]),
 		editorLanguage.of([]),
 		EditorView.editable.of(false),
