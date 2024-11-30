@@ -9,7 +9,8 @@
 	import { indentUnit } from '@codemirror/language';
 	import { languages } from '@codemirror/language-data';
 
-	import { oneDark } from '@codemirror/theme-one-dark';
+	// import { oneDark } from '@codemirror/theme-one-dark';
+	import { githubDark } from '@uiw/codemirror-theme-github';
 
 	import { onMount, createEventDispatcher, getContext, tick } from 'svelte';
 
@@ -80,7 +81,7 @@
 	let extensions = [
 		basicSetup,
 		keymap.of([{ key: 'Tab', run: acceptCompletion }, indentWithTab]),
-		indentUnit.of('    '),
+		indentUnit.of('  '),
 		placeholder('Enter your code here...'),
 		EditorView.updateListener.of((e) => {
 			if (e.docChanged) {
@@ -127,7 +128,7 @@
 
 		if (isDarkMode) {
 			codeEditor.dispatch({
-				effects: editorTheme.reconfigure(oneDark)
+				effects: editorTheme.reconfigure(githubDark)
 			});
 		}
 
@@ -141,7 +142,7 @@
 						isDarkMode = _isDarkMode;
 						if (_isDarkMode) {
 							codeEditor.dispatch({
-								effects: editorTheme.reconfigure(oneDark)
+								effects: editorTheme.reconfigure(githubDark)
 							});
 						} else {
 							codeEditor.dispatch({

@@ -173,12 +173,12 @@ input[type='number'] {
 }
 
 .codespan {
-	color: #eb5757;
+	/* color: #0d0d0d; */
 	border-width: 0px;
-	padding: 3px 8px;
+	padding: 2px 4px;
 	font-size: 0.8em;
 	font-weight: 600;
-	@apply rounded-md dark:bg-gray-800 bg-gray-100 mx-0.5;
+	@apply rounded-sm dark:bg-gray-800 bg-gray-100 dark:text-[#ececec] text-[#0d0d0d] mx-0.5;
 }
 
 .svelte-flow {
