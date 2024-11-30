@@ -22,7 +22,7 @@
 			<div class="flex w-full">
 				<ProfileImage
 					src={data.user?.profile_image_url ?? '/user.png'}
-					className={'size-5 -translate-y-[1px]'}
+					className={'size-6 -translate-y-[1px]'}
 				/>
 				<div class="ml-2">
 					<div class=" flex justify-between items-center">
@@ -42,7 +42,7 @@
 			<div class="flex w-full">
 				<ProfileImage
 					src={data?.model?.info?.meta?.profile_image_url ?? ''}
-					className={'size-5 -translate-y-[1px]'}
+					className={'size-6 -translate-y-[1px]'}
 				/>
 
 				<div class="ml-2">

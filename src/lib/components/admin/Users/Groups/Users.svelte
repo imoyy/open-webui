@@ -93,7 +93,7 @@
 							<Tooltip content={user.email} placement="top-start">
 								<div class="flex">
 									<img
-										class=" rounded-full size-5 object-cover mr-2.5"
+										class=" rounded-full size-6 object-cover mr-2.5"
 										src={user.profile_image_url.startsWith(WEBUI_BASE_URL) ||
 										user.profile_image_url.startsWith('https://www.gravatar.com/avatar/') ||
 										user.profile_image_url.startsWith('data:')

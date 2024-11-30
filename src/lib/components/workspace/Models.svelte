@@ -356,7 +356,7 @@
 									class="self-center w-fit text-sm p-1.5 dark:text-gray-300 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/5 rounded-xl"
 									type="button"
 								>
-									<EllipsisHorizontal className="size-5" />
+									<EllipsisHorizontal className="size-6" />
 								</button>
 							</ModelMenu>
 

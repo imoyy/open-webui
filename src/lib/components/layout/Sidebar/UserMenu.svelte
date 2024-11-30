@@ -84,7 +84,7 @@
 				}}
 			>
 				<div class=" self-center mr-3">
-					<ArchiveBox className="size-5" strokeWidth="1.5" />
+					<ArchiveBox className="size-6" strokeWidth="1.5" />
 				</div>
 				<div class=" self-center truncate">{$i18n.t('Archived Chats')}</div>
 			</button>
@@ -108,7 +108,7 @@
 							viewBox="0 0 24 24"
 							stroke-width="1.5"
 							stroke="currentColor"
-							class="size-5"
+							class="size-6"
 						>
 							<path
 								stroke-linecap="round"

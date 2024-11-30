@@ -158,6 +158,16 @@ input[type='number'] {
 	font-size: medium;
 }
 
+.ͼ1 .cm-line {
+	display: block;
+	padding: 3px 6px 3px 6px;
+}
+
+.cm-line {
+	display: block;
+	padding: 3px 6px 3px 6px;
+}
+
 .cm-scroller {
 	@apply scrollbar-hidden;
 }

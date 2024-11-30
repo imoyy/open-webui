@@ -42,7 +42,7 @@
 					show = true;
 				}}
 			>
-				<EllipsisHorizontal className="size-5" />
+				<EllipsisHorizontal className="size-6" />
 			</button>
 		</slot>
 	</Tooltip>

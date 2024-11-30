@@ -121,7 +121,7 @@
 									}
 								}}
 							>
-								<Mic className="size-5" />
+								<Mic className="size-6" />
 							</button>
 						</Tooltip>
 					{/if}

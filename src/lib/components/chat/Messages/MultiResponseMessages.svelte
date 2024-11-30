@@ -290,7 +290,7 @@
 										mergeResponsesHandler();
 									}}
 								>
-									<Merge className=" size-5 " />
+									<Merge className=" size-6 " />
 								</button>
 							</Tooltip>
 						</div>

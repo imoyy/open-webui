@@ -173,7 +173,7 @@
 										<img
 											src={feedback?.user?.profile_image_url ?? '/user.png'}
 											alt={feedback?.user?.name}
-											class="size-5 rounded-full object-cover shrink-0"
+											class="size-6 rounded-full object-cover shrink-0"
 										/>
 									</div>
 								</Tooltip>

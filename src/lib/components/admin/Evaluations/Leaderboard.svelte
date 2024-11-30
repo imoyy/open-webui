@@ -351,7 +351,7 @@
 									<img
 										src={model?.info?.meta?.profile_image_url ?? '/favicon.png'}
 										alt={model.name}
-										class="size-5 rounded-full object-cover shrink-0"
+										class="size-6 rounded-full object-cover shrink-0"
 									/>
 								</div>
 

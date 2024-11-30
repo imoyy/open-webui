@@ -41,7 +41,7 @@
 					window.open('https://docs.openwebui.com', '_blank');
 				}}
 			>
-				<QuestionMarkCircle className="size-5" />
+				<QuestionMarkCircle className="size-6" />
 				<div class="flex items-center">{$i18n.t('Documentation')}</div>
 			</DropdownMenu.Item>
 
@@ -52,7 +52,7 @@
 					showShortcutsHandler();
 				}}
 			>
-				<Keyboard className="size-5" />
+				<Keyboard className="size-6" />
 				<div class="flex items-center">{$i18n.t('Keyboard shortcuts')}</div>
 			</DropdownMenu.Item>
 		</DropdownMenu.Content>

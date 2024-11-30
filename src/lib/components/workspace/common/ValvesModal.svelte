@@ -130,7 +130,7 @@
 						{#if !loading}
 							<Valves {valvesSpec} bind:valves />
 						{:else}
-							<Spinner className="size-5" />
+							<Spinner className="size-6" />
 						{/if}
 					</div>
 
