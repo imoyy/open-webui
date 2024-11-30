@@ -85,7 +85,7 @@
 
 <div class=" flex w-full user-message" dir={$settings.chatDirection} id="message-{message.id}">
 	{#if !($settings?.chatBubble ?? true)}
-		<div class={`flex-shrink-0 ${($settings?.chatDirection ?? 'LTR') === 'LTR' ? 'mr-3' : 'ml-3'}`}>
+		<div class={`flex-shrink-0 mt-1 ${($settings?.chatDirection ?? 'LTR') === 'LTR' ? 'mr-2' : 'ml-2'}`}>
 			<ProfileImage
 				src={message.user
 					? ($models.find((m) => m.id === message.user)?.info?.meta?.profile_image_url ??

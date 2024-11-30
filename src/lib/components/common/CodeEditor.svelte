@@ -1,12 +1,12 @@
 <script lang="ts">
 	import { basicSetup, EditorView } from 'codemirror';
-	import { keymap, placeholder } from '@codemirror/view';
+	import { drawSelection, dropCursor, highlightActiveLine, highlightSpecialChars, keymap, lineNumbers, placeholder, rectangularSelection } from '@codemirror/view';
 	import { Compartment, EditorState } from '@codemirror/state';
 
-	import { acceptCompletion } from '@codemirror/autocomplete';
+	import { acceptCompletion, autocompletion, closeBrackets } from '@codemirror/autocomplete';
 	import { indentWithTab } from '@codemirror/commands';
 
-	import { indentUnit } from '@codemirror/language';
+	import { bracketMatching, defaultHighlightStyle, indentOnInput, indentUnit, syntaxHighlighting } from '@codemirror/language';
 	import { languages } from '@codemirror/language-data';
 
 	// import { oneDark } from '@codemirror/theme-one-dark';
@@ -79,7 +79,8 @@
 	};
 
 	let extensions = [
-		basicSetup,
+		EditorState.allowMultipleSelections.of(true),
+		syntaxHighlighting(defaultHighlightStyle, { fallback: true }),
 		keymap.of([{ key: 'Tab', run: acceptCompletion }, indentWithTab]),
 		indentUnit.of('  '),
 		placeholder('Enter your code here...'),
@@ -90,7 +91,8 @@
 			}
 		}),
 		editorTheme.of([]),
-		editorLanguage.of([])
+		editorLanguage.of([]),
+		EditorView.editable.of(false),
 	];
 
 	$: if (lang) {
@@ -179,6 +181,11 @@
 			document.removeEventListener('keydown', keydownHandler);
 		};
 	});
+
+
+	function highlightSelectionMatches() {
+		throw new Error('Function not implemented.');
+	}
 </script>
 
 <div id="code-textarea-{id}" class="h-full w-full" />

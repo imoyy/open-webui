@@ -156,18 +156,6 @@ input[type='number'] {
 	width: 100%;
 }
 
-.cm-gutter {
-	display: none;
-}
-
-.cm-gutters {
-	display: none;
-}
-
-.cm-lineNumbers {
-	display: none;
-}
-
 .cm-scroller {
 	@apply scrollbar-hidden;
 }
@@ -190,7 +178,7 @@ input[type='number'] {
 	padding: 2px 4px;
 	font-size: 0.8em;
 	font-weight: 600;
-	@apply rounded-sm dark:bg-gray-800 bg-gray-100 dark:text-[#ececec] text-[#0d0d0d] mx-0.5;
+	@apply rounded-sm dark:bg-dark-800 bg-white dark:text-[#ececec] text-[#0d0d0d] mx-0.5;
 }
 
 .svelte-flow {
