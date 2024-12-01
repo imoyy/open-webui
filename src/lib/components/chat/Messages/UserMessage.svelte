@@ -93,7 +93,7 @@
 							src={message.user
 								? ($models.find((m) => m.id === message.user)?.info?.meta?.profile_image_url ??
 									'/user.png')
-								: (user?.profile_image_url ?? '/user.png')}
+								: (user?.profile_image_url ?? leading-7 '/user.png')}
 							className={'size-7'}
 						/>
 					</div>
@@ -111,7 +111,7 @@
 						</div>
 						{#if message.timestamp}
 							<span
-								class=" invisible group-hover:visible text-gray-400 text-xs font-medium uppercase ml-0.5 -mt-0.5"
+								class="self-center invisible group-hover:visible text-gray-400 text-xs font-medium uppercase ml-0.5 -mt-0.5"
 							>
 								{dayjs(message.timestamp * 1000).format($i18n.t('h:mm a'))}
 							</span>

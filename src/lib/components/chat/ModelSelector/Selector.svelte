@@ -249,7 +249,7 @@
 	<DropdownMenu.Content
 		class=" z-40 {$mobile
 			? `w-full`
-			: `${className}`} max-w-[calc(100vw-1rem)] justify-start rounded-xl  bg-white dark:bg-dark-700 dark:text-white shadow-lg  outline-none"
+			: `${className}`} border dark:border-dark-700 drop-shadow-sm max-w-[calc(100vw-1rem)] justify-start rounded-xl  bg-white dark:bg-dark-700 dark:text-white shadow-lg  outline-none"
 		transition={flyAndScale}
 		side={$mobile ? 'bottom' : 'bottom-start'}
 		sideOffset={3}
