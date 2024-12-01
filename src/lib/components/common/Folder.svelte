@@ -119,9 +119,9 @@
 				>
 					<div class="text-gray-300 dark:text-gray-600">
 						{#if open}
-							<ChevronDown className=" size-3" strokeWidth="2.5" />
+							<ChevronDown className=" size-4" strokeWidth="2.5" />
 						{:else}
-							<ChevronRight className=" size-3" strokeWidth="2.5" />
+							<ChevronRight className=" size-4" strokeWidth="2.5" />
 						{/if}
 					</div>
 

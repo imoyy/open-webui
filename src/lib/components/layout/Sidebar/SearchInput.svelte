@@ -87,7 +87,9 @@
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 20 20"
 				fill="currentColor"
-				class="w-4 h-4"
+				class="size-5"
+				stroke-width="2"
+				stroke="currentColor"
 			>
 				<path
 					fill-rule="evenodd"

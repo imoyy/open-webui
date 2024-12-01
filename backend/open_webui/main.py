@@ -2741,7 +2741,8 @@ async def get_manifest_json():
         "description": "Open WebUI is an open, extensible, user-friendly interface for AI that adapts to your workflow.",
         "start_url": "/",
         "display": "standalone",
-        "background_color": "#212121",
+        "theme_color": "#0c0c0c",
+        "background_color": "#0c0c0c",
         "orientation": "portrait-primary",
         "icons": [
             {

@@ -411,7 +411,7 @@
 	data-state={$showSidebar}
 >
 	<div
-		class="py-2 my-auto flex flex-col justify-between h-screen max-h-[100dvh] w-[260px] overflow-x-hidden z-50 {$showSidebar
+		class="gap-y-2 py-2 my-auto flex flex-col justify-between h-screen max-h-[100dvh] w-[260px] overflow-x-hidden z-50 {$showSidebar
 			? ''
 			: 'invisible'}"
 	>
@@ -443,13 +443,13 @@
 					/> -->
 					
 				</div>
-				<div class="pt-0.5 self-center font-medium text-sm text-gray-850 dark:text-white font-primary">
+				<div class="pt-0.5 self-center font-medium text-sm hover:text-gray-100 dark:hover:text-gray-800 font-primary">
 					{$i18n.t('New Chat')}
 				</div>
 			</a>
 
 			<button
-				class=" cursor-pointer p-[7px] flex rounded-xl hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+				class=" cursor-pointer p-[7px] flex rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition"
 				on:click={() => {
 					showSidebar.set(!$showSidebar);
 				}}
@@ -490,7 +490,7 @@
 							viewBox="0 0 24 24"
 							stroke-width="2"
 							stroke="currentColor"
-							class="size-[1.1rem]"
+							class="size-5"
 						>
 							<path
 								stroke-linecap="round"
