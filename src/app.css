@@ -157,6 +157,7 @@ input[type='number'] {
 	height: 100%;
 	width: 100%;
 	font-size: medium;
+	@apply bg-gray-50 dark:bg-[#0d1117]
 }
 
 .ͼ1 .cm-line {
@@ -189,9 +190,9 @@ input[type='number'] {
 	/* color: #0d0d0d; */
 	border-width: 0px;
 	padding: 2px 4px;
-	font-size: 0.8em;
+	font-size: 0.85rem;
 	/* font-weight: 600; */
-	@apply rounded-sm dark:bg-[#424242] bg-white dark:text-[#ececec] text-[#0d0d0d] mx-0.5;
+	@apply rounded-sm dark:bg-[#424242] bg-gray-100 dark:text-[#ececec] text-[#0d0d0d] mx-0.5;
 }
 
 .svelte-flow {

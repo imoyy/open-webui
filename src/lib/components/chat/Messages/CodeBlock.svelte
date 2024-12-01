@@ -360,7 +360,7 @@ __builtins__.input = input`);
 						? ''
 						: 'rounded-b-lg'} overflow-hidden"
 			>
-				<div class=" pt-7 bg-[#f9f9f9] dark:bg-[#0d1117]"></div>
+				<div class=" pt-7 bg-gray-50 dark:bg-[#0d1117]"></div>
 				<CodeEditor
 					value={code}
 					{id}
