@@ -192,7 +192,7 @@ input[type='number'] {
 	padding: 2px 4px;
 	font-size: 0.85rem;
 	/* font-weight: 600; */
-	@apply rounded-sm dark:bg-[#424242] bg-gray-100 dark:text-[#ececec] text-[#0d0d0d] mx-0.5;
+	@apply rounded-md dark:bg-[#424242] bg-gray-100 dark:text-[#ececec] text-[#0d0d0d] mx-0.5;
 }
 
 .svelte-flow {
