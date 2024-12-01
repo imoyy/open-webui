@@ -93,7 +93,7 @@
 							src={message.user
 								? ($models.find((m) => m.id === message.user)?.info?.meta?.profile_image_url ??
 									'/user.png')
-								: (user?.profile_image_url ?? leading-7 '/user.png')}
+								: (user?.profile_image_url ?? '/user.png')}
 							className={'size-7'}
 						/>
 					</div>
