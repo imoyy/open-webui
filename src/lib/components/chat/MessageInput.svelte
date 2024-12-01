@@ -563,7 +563,7 @@
 											}}
 										>
 											<button
-												class="bg-transparent hover:bg-gray-100 text-gray-800 dark:text-white dark:hover:bg-gray-800 transition rounded-full p-2 outline-none focus:outline-none"
+												class="bg-transparent hover:bg-gray-100 text-gray-800 dark:text-white dark:hover:bg-gray-800 transition rounded-full p-1.5 outline-none focus:outline-none"
 												type="button"
 												aria-label="More"
 											>
@@ -583,7 +583,7 @@
 
 									{#if $settings?.richTextInput ?? true}
 										<div
-											class="scrollbar-hidden text-left bg-[#f4f4f4] dark:bg-gray-850 dark:text-gray-100 outline-none w-full py-2.5 px-1 rounded-xl resize-none h-fit max-h-60 overflow-auto"
+											class="scrollbar-hidden text-left bg-[#f4f4f4] dark:bg-dark-800 dark:text-gray-100 outline-none w-full py-2.5 px-1 rounded-xl resize-none h-fit max-h-60 overflow-auto"
 										>
 											<RichTextInput
 												bind:this={chatInputElement}
@@ -782,7 +782,7 @@
 										<textarea
 											id="chat-input"
 											bind:this={chatInputElement}
-											class="scrollbar-hidden bg-[#f4f4f4] dark:bg-gray-850 dark:text-gray-100 outline-none w-full py-3 px-1 rounded-xl resize-none h-[48px]"
+											class="scrollbar-hidden bg-[#f4f4f4] dark:bg-dark-800 dark:text-gray-100 outline-none w-full py-3 px-1 rounded-xl resize-none h-[48px]"
 											placeholder={placeholder ? placeholder : $i18n.t('Send a Message')}
 											bind:value={prompt}
 											on:keypress={(e) => {
@@ -1102,7 +1102,7 @@
 									<div class=" flex items-center mb-1.5">
 										<Tooltip content={$i18n.t('Stop')}>
 											<button
-												class="bg-white hover:bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-800 transition rounded-full p-1.5"
+												class="bg-white hover:bg-gray-100 text-gray-800 dark:bg-dark-700 dark:text-white dark:hover:bg-dark-600 transition rounded-full p-1.5"
 												on:click={() => {
 													stopResponse();
 												}}

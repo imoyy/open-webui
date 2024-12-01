@@ -49,6 +49,7 @@
 	import Plus from '../icons/Plus.svelte';
 	import Tooltip from '../common/Tooltip.svelte';
 	import Folders from './Sidebar/Folders.svelte';
+	import PencilSquare from '../icons/PencilSquare.svelte';
 
 	const BREAKPOINT = 768;
 
@@ -432,15 +433,17 @@
 					}, 0);
 				}}
 			>
-				<div class="self-center mx-1.5">
-					<img
+				<div class="self-center mr-1.5">
+					<PencilSquare className="size-6" strokeWidth="2" />
+					<!-- <img
 						crossorigin="anonymous"
 						src="{WEBUI_BASE_URL}/static/favicon.png"
 						class=" size-6 -translate-x-1.5 rounded-full"
 						alt="logo"
-					/>
+					/> -->
+					
 				</div>
-				<div class=" self-center font-medium text-sm text-gray-850 dark:text-white font-primary">
+				<div class="pt-0.5 self-center font-medium text-sm text-gray-850 dark:text-white font-primary">
 					{$i18n.t('New Chat')}
 				</div>
 			</a>

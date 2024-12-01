@@ -88,7 +88,7 @@
 		{#if !($settings?.chatBubble ?? true)}
 			<div>
 				<div class="flex flex-row">
-					<div class={`inline-block flex-shrink-0 mt-1 ${($settings?.chatDirection ?? 'LTR') === 'LTR' ? 'mr-2' : 'ml-2'}`}>
+					<div class={`inline-block flex-shrink-0 mt-1 ${($settings?.chatDirection ?? 'LTR') === 'LTR' ? 'mr-3' : 'ml-3'}`}>
 						<ProfileImage
 							src={message.user
 								? ($models.find((m) => m.id === message.user)?.info?.meta?.profile_image_url ??
