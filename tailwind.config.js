@@ -34,7 +34,7 @@ export default {
 						code: false,
 						'pre code': false,
 						'code::before': false,
-						'code::after': false
+						'code::after': false,
 					}
 				}
 			},

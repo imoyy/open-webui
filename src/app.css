@@ -53,8 +53,7 @@ math {
 }
 
 .markdown-prose {
-	line-height: 1.95rem;
-	@apply dark:text-white prose dark:prose-invert prose-p:my-0 prose-img:my-1 prose-headings:my-1 prose-pre:my-0 prose-table:my-0 prose-blockquote:my-0 prose-ul:-my-0 prose-ol:-my-0 prose-li:-my-0 whitespace-pre-line;
+	@apply dark:text-white leading-8 prose dark:prose-invert prose-p:my-0 prose-img:my-1 prose-headings:my-1 prose-pre:my-0 prose-table:my-0 prose-blockquote:my-0 prose-ul:-my-0 prose-ol:-my-0 prose-li:-my-0 whitespace-pre-line;
 }
 
 .markdown a {
@@ -161,7 +160,7 @@ input[type='number'] {
 
 .ͼ1 .cm-line {
 	display: block;
-	padding: 3px 6px 3px 6px;
+	padding: 3px 6px;
 }
 
 .cm-line {
