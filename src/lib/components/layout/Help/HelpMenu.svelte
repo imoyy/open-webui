@@ -28,7 +28,7 @@
 
 	<div slot="content">
 		<DropdownMenu.Content
-			class="w-full border dark:border-dark-700 drop-shadow-sm max-w-[200px] rounded-xl px-1 py-1.5  z-50 bg-white dark:bg-dark-700 dark:text-white shadow-lg"
+			class="w-full border dark:border-gray-300 drop-shadow-sm max-w-[200px] rounded-xl px-1 py-1.5  z-50 bg-white dark:bg-dark-700 dark:text-white shadow-lg"
 			sideOffset={4}
 			side="top"
 			align="end"
