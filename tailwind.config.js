@@ -30,11 +30,30 @@ export default {
 			typography: {
 				DEFAULT: {
 					css: {
+						lineHeight: '1.625',
 						pre: false,
 						code: false,
 						'pre code': false,
 						'code::before': false,
-						'code::after': false
+						'code::after': false,
+						'ul > li': {
+              'padding-left': '1rem', 
+            },
+            'ol > li': {
+              'padding-left': '1rem',
+            },
+            'ul > li > ul > li': {
+              'padding-left': '0.7rem',
+            },
+            'ol > li > ol > li': {
+              'padding-left': '0.7rem',
+            },
+            'ul > li > ul > li > ul > li': {
+              'padding-left': '0.6rem',
+            },
+            'ol > li > ol > li > ol > li': {
+              'padding-left': '0.6rem',
+            },
 					}
 				}
 			},
