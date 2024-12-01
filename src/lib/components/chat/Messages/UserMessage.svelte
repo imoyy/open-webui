@@ -94,20 +94,21 @@
 								? ($models.find((m) => m.id === message.user)?.info?.meta?.profile_image_url ??
 									'/user.png')
 								: (user?.profile_image_url ?? '/user.png')}
-							className={'size-8'}
+							className={'size-7'}
 						/>
 					</div>
 					
 					<Name>
-						{#if message.user}
-							{$i18n.t('You')}
-							<span class=" text-gray-500 text-sm font-medium">{message?.user ?? ''}</span>
-						{:else if $settings.showUsername || $_user.name !== user.name}
-							{user.name}
-						{:else}
-							{$i18n.t('You')}
-						{/if}
-
+						<div class="flex items-center">
+							{#if message.user}
+								{$i18n.t('You')}
+								<span class=" text-gray-500 text-sm font-medium">{message?.user ?? ''}</span>
+							{:else if $settings.showUsername || $_user.name !== user.name}
+								{user.name}
+							{:else}
+								{$i18n.t('You')}
+							{/if}
+						</div>
 						{#if message.timestamp}
 							<span
 								class=" invisible group-hover:visible text-gray-400 text-xs font-medium uppercase ml-0.5 -mt-0.5"

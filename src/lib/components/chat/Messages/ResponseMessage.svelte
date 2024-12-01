@@ -481,16 +481,18 @@
 
 		<div class="flex-auto w-0 pl-1">
 			<div class="flex flex-row">
-				<div class={`inline-block flex-shrink-0 mt-1 ${($settings?.chatDirection ?? 'LTR') === 'LTR' ? 'mr-3' : 'ml-3'}`}>
+				<div class={`inline-block flex-shrink-0 mb-1 ${($settings?.chatDirection ?? 'LTR') === 'LTR' ? 'mr-3' : 'ml-3'}`}>
 					<ProfileImage
 						src={model?.info?.meta?.profile_image_url ??
 							($i18n.language === 'dg-DG' ? `/doge.png` : `${WEBUI_BASE_URL}/static/favicon.png`)}
-						className={'size-8'}
+						className={'size-7'}
 					/>
 				</div>
 				
 				<Name>
-					{model?.name ?? message.model}
+					<div class="flex items-center">
+						{model?.name ?? message.model}
+					</div>
 
 					{#if message.timestamp}
 						<span
