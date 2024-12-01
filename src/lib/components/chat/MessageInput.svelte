@@ -18,7 +18,7 @@
 		showControls
 	} from '$lib/stores';
 
-	import { blobToFile, findWordIndices } from '$lib/utils';
+	import { blobToFile, createMessagesList, findWordIndices } from '$lib/utils';
 	import { transcribeAudio } from '$lib/apis/audio';
 	import { uploadFile } from '$lib/apis/files';
 	import { getTools } from '$lib/apis/tools';
@@ -34,6 +34,8 @@
 	import Commands from './MessageInput/Commands.svelte';
 	import XMark from '../icons/XMark.svelte';
 	import RichTextInput from '../common/RichTextInput.svelte';
+	import { generateAutoCompletion } from '$lib/apis';
+	import { error, text } from '@sveltejs/kit';
 
 	const i18n = getContext('i18n');
 
@@ -46,6 +48,9 @@
 
 	export let atSelectedModel: Model | undefined;
 	export let selectedModels: [''];
+
+	let selectedModelIds = [];
+	$: selectedModelIds = atSelectedModel !== undefined ? [atSelectedModel.id] : selectedModels;
 
 	export let history;
 
@@ -558,7 +563,7 @@
 											}}
 										>
 											<button
-												class="bg-gray-50 hover:bg-gray-100 text-gray-800 dark:bg-gray-850 dark:text-white dark:hover:bg-gray-800 transition rounded-full p-2 outline-none focus:outline-none"
+												class="bg-transparent hover:bg-gray-100 text-gray-800 dark:text-white dark:hover:bg-gray-800 transition rounded-full p-2 outline-none focus:outline-none"
 												type="button"
 												aria-label="More"
 											>
@@ -582,6 +587,7 @@
 										>
 											<RichTextInput
 												bind:this={chatInputElement}
+												bind:value={prompt}
 												id="chat-input"
 												messageInput={true}
 												shiftEnter={!$mobile ||
@@ -592,7 +598,28 @@
 													)}
 												placeholder={placeholder ? placeholder : $i18n.t('Send a Message')}
 												largeTextAsFile={$settings?.largeTextAsFile ?? false}
-												bind:value={prompt}
+												autocomplete={true}
+												generateAutoCompletion={async (text) => {
+													if (selectedModelIds.length === 0 || !selectedModelIds.at(0)) {
+														toast.error($i18n.t('Please select a model first.'));
+													}
+
+													const res = await generateAutoCompletion(
+														localStorage.token,
+														selectedModelIds.at(0),
+														text,
+														history?.currentId
+															? createMessagesList(history, history.currentId)
+															: null
+													).catch((error) => {
+														console.log(error);
+
+														return null;
+													});
+
+													console.log(res);
+													return res;
+												}}
 												on:keydown={async (e) => {
 													e = e.detail.event;
 
@@ -881,7 +908,7 @@
 													}
 
 													e.target.style.height = '';
-													e.target.style.height = Math.min(e.target.scrollHeight, 200) + 'px';
+													e.target.style.height = Math.min(e.target.scrollHeight, 320) + 'px';
 												}
 
 												if (e.key === 'Escape') {
@@ -894,11 +921,11 @@
 											rows="1"
 											on:input={async (e) => {
 												e.target.style.height = '';
-												e.target.style.height = Math.min(e.target.scrollHeight, 200) + 'px';
+												e.target.style.height = Math.min(e.target.scrollHeight, 320) + 'px';
 											}}
 											on:focus={async (e) => {
 												e.target.style.height = '';
-												e.target.style.height = Math.min(e.target.scrollHeight, 200) + 'px';
+												e.target.style.height = Math.min(e.target.scrollHeight, 320) + 'px';
 											}}
 											on:paste={async (e) => {
 												const clipboardData = e.clipboardData || window.clipboardData;
