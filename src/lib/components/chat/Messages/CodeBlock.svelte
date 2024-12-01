@@ -302,7 +302,7 @@ __builtins__.input = input`);
 </script>
 
 <div>
-	<div class="relative {className} flex flex-col rounded-lg border border-[#f9f9f9] dark:border-gray-300 shadow-md" dir="ltr">
+	<div class="relative {className} flex flex-col rounded-lg border border-[#f9f9f9] dark:border-dark-800 shadow-md" dir="ltr">
 		{#if lang === 'mermaid'}
 			{#if mermaidHtml}
 				<SvgPanZoom
@@ -360,7 +360,7 @@ __builtins__.input = input`);
 						? ''
 						: 'rounded-b-lg'} overflow-hidden"
 			>
-				<div class=" pt-7 bg-gray-300 dark:bg-[#0d1117]"></div>
+				<div class=" pt-7 bg-[#f9f9f9] dark:bg-[#0d1117]"></div>
 				<CodeEditor
 					value={code}
 					{id}
