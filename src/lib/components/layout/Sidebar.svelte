@@ -406,7 +406,7 @@
 	id="sidebar"
 	class="h-screen max-h-[100dvh] min-h-screen select-none {$showSidebar
 		? 'md:relative w-[260px] max-w-[260px]'
-		: '-translate-x-[260px] w-[0px]'} bg-[#f9f9f9] text-black dark:bg-dark-700 sm:dark:bg-dark-800 dark:text-[#ececec] text-sm transition fixed z-50 top-0 left-0 overflow-x-hidden
+		: '-translate-x-[260px] w-[0px]'} bg-[#f9f9f9] text-black dark:bg-dark-800 dark:text-[#ececec] text-sm transition fixed z-50 top-0 left-0 overflow-x-hidden
         "
 	data-state={$showSidebar}
 >
@@ -443,7 +443,7 @@
 					/> -->
 					
 				</div>
-				<div class="pt-0.5 self-center font-medium text-sm hover:text-gray-100 dark:hover:text-gray-800 font-primary">
+				<div class="pt-0.5 self-center font-medium text-sm  font-primary">
 					{$i18n.t('New Chat')}
 				</div>
 			</a>
@@ -471,7 +471,7 @@
 		{#if $user?.role === 'admin' || $user?.permissions?.workspace?.models || $user?.permissions?.workspace?.knowledge || $user?.permissions?.workspace?.prompts || $user?.permissions?.workspace?.tools}
 			<div class="px-1.5 flex justify-center text-gray-800 dark:text-gray-200">
 				<a
-					class="flex-grow flex space-x-3 rounded-lg px-2.5 py-[7px] hover:bg-gray-100 dark:hover:bg-gray-900 transition"
+					class="flex-grow flex space-x-2 rounded-lg px-2.5 py-[7px] hover:bg-gray-100 dark:hover:bg-gray-900 transition"
 					href="/workspace"
 					on:click={() => {
 						selectedChatId = null;
@@ -501,7 +501,7 @@
 					</div>
 
 					<div class="flex self-center">
-						<div class=" self-center font-medium text-sm font-primary">{$i18n.t('Workspace')}</div>
+						<div class=" self-center font-medium text-sm text-[#949494] font-primary">{$i18n.t('Workspace')}</div>
 					</div>
 				</a>
 			</div>
