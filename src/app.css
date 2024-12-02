@@ -157,13 +157,11 @@ input[type='number'] {
 	height: 100%;
 	width: 100%;
 	font-size: medium;
-	font-family: 'JetBrainsMono','JetBrains Mono', monospace !important;
 	@apply bg-gray-50 dark:bg-[#0d1117]
 }
 
 .ͼ1 .cm-line {
 	display: block;
-	font-family: 'JetBrainsMono','JetBrains Mono', monospace !important;
 	padding: 3px 6px;
 }
 
