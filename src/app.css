@@ -156,7 +156,7 @@ input[type='number'] {
 	padding: 16px;
 	height: 100%;
 	width: 100%;
-	font-size: medium;
+	font-size: smaller;
 	font-family: 'JetBrainsMono','JetBrains Mono', monospace !important;
 	@apply bg-gray-50 dark:bg-[#0d1117]
 }
@@ -255,12 +255,12 @@ input[type='number'] {
 }
 
 .tiptap p code {
-	color: #eb5757;
+	color: #ebebeb;
 	border-width: 0px;
 	padding: 3px 8px;
 	font-size: 0.8em;
 	font-weight: 600;
-	@apply rounded-md dark:bg-gray-800 bg-gray-100 mx-0.5;
+	@apply rounded-md dark:text-[#0d0d0d] dark:bg-gray-800 bg-gray-100 mx-0.5;
 }
 
 /* Code styling */
