@@ -255,12 +255,12 @@ input[type='number'] {
 }
 
 .tiptap p code {
-	color: #ebebeb;
+	color: #0d0d0d;
 	border-width: 0px;
 	padding: 3px 8px;
 	font-size: 0.8em;
 	font-weight: 600;
-	@apply rounded-md dark:text-[#0d0d0d] dark:bg-gray-800 bg-gray-100 mx-0.5;
+	@apply rounded-md dark:text-[#ebebeb] dark:bg-gray-800 bg-gray-100 mx-0.5;
 }
 
 /* Code styling */
