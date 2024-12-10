@@ -305,7 +305,7 @@
 				<div class="w-full relative">
 					{#if atSelectedModel !== undefined || selectedToolIds.length > 0 || webSearchEnabled}
 						<div
-							class="px-4 pb-0.5 pt-1.5 text-left w-full flex flex-col absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white dark:from-gray-900 z-10"
+							class="px-3 pb-0.5 pt-1.5 text-left w-full flex flex-col absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white dark:from-gray-900 z-10"
 						>
 							{#if selectedToolIds.length > 0}
 								<div class="flex items-center justify-between w-full">
@@ -548,7 +548,7 @@
 								{/if}
 
 								<div class=" flex">
-									<div class=" ml-0.5 self-end mb-1.5 flex space-x-1">
+									<div class="ml-1 self-end mb-1.5 flex space-x-1">
 										<InputMenu
 											bind:webSearchEnabled
 											bind:selectedToolIds
@@ -569,12 +569,12 @@
 											>
 												<svg
 													xmlns="http://www.w3.org/2000/svg"
-													viewBox="0 0 16 16"
+													viewBox="0 0 20 20"
 													fill="currentColor"
 													class="size-6"
 												>
 													<path
-														d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z"
+														d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z"
 													/>
 												</svg>
 											</button>
@@ -968,12 +968,12 @@
 										/>
 									{/if}
 
-									<div class="self-end mb-2 flex space-x-1 mr-1">
+									<div class="self-end mb-1.5 flex space-x-1 mr-1">
 										{#if !history?.currentId || history.messages[history.currentId]?.done == true}
 											<Tooltip content={$i18n.t('Record voice')}>
 												<button
 													id="voice-input-button"
-													class=" text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-850 transition rounded-full p-1.5 mr-0.5 self-center"
+													class=" text-gray-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-200 transition rounded-full p-1.5 mr-0.5 self-center"
 													type="button"
 													on:click={async () => {
 														try {
@@ -1017,44 +1017,43 @@
 												</button>
 											</Tooltip>
 										{/if}
-									</div>
-								</div>
-							</div>
-							<div class="flex items-end w-10">
-								{#if !history.currentId || history.messages[history.currentId]?.done == true}
-									{#if prompt === ''}
-										<div class=" flex items-center mb-1">
-											<Tooltip content={$i18n.t('Call')}>
-												<button
-													class=" text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-850 transition rounded-full p-2 self-center"
-													type="button"
-													on:click={async () => {
-														if (selectedModels.length > 1) {
-															toast.error($i18n.t('Select only one model to call'));
 
-															return;
-														}
+										{#if !history.currentId || history.messages[history.currentId]?.done == true}
+											{#if prompt === ''}
+												<div class=" flex items-center">
+													<Tooltip content={$i18n.t('Call')}>
+														<button
+															class=" bg-black text-white hover:bg-gray-900 dark:bg-white dark:text-black dark:hover:bg-gray-100 transition rounded-full p-2 self-center"
+															type="button"
+															on:click={async () => {
+																if (selectedModels.length > 1) {
+																	toast.error($i18n.t('Select only one model to call'));
 
-														if ($config.audio.stt.engine === 'web') {
-															toast.error(
-																$i18n.t('Call feature is not supported when using Web STT engine')
-															);
+																	return;
+																}
 
-															return;
-														}
-														// check if user has access to getUserMedia
-														try {
-															let stream = await navigator.mediaDevices.getUserMedia({
-																audio: true
-															});
-															// If the user grants the permission, proceed to show the call overlay
+																if ($config.audio.stt.engine === 'web') {
+																	toast.error(
+																		$i18n.t(
+																			'Call feature is not supported when using Web STT engine'
+																		)
+																	);
 
-															if (stream) {
-																const tracks = stream.getTracks();
-																tracks.forEach((track) => track.stop());
-															}
+																	return;
+																}
+																// check if user has access to getUserMedia
+																try {
+																	let stream = await navigator.mediaDevices.getUserMedia({
+																		audio: true
+																	});
+																	// If the user grants the permission, proceed to show the call overlay
 
-															stream = null;
+																	if (stream) {
+																		const tracks = stream.getTracks();
+																		tracks.forEach((track) => track.stop());
+																	}
+
+																	stream = null;
 
 															showCallOverlay.set(true);
 															showControls.set(true);
