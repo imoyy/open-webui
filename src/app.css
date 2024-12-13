@@ -53,7 +53,7 @@ math {
 }
 
 .markdown-prose {
-	line-height: 1.95rem !important;
+	line-height: 1.85rem !important;
 	@apply dark:text-white prose dark:prose-invert prose-p:my-0 prose-img:my-1 prose-headings:my-1 prose-pre:my-0 prose-table:my-0 prose-blockquote:my-0 prose-ul:-my-0 prose-ol:-my-0 prose-li:-my-0 whitespace-pre-line;
 }
 
@@ -194,7 +194,7 @@ input[type='number'] {
 	padding: 2px 4px;
 	font-size: 0.85rem;
 	/* font-weight: 600; */
-	@apply rounded-md dark:bg-[#424242] bg-gray-100 dark:text-[#ececec] text-[#0d0d0d] mx-0.5;
+	@apply rounded-md dark:bg-[#424242] bg-gray-100 dark:text-[#ececec] text-[#0d0d0d] mx-0.5 px-0.5;
 }
 
 .svelte-flow {

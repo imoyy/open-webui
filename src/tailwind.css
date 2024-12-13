@@ -14,3 +14,13 @@
 		white-space: pre-wrap;
 	}
 }
+
+@layer utilities {
+	.no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
