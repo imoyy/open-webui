@@ -44,7 +44,7 @@
 
 <ShareChatModal bind:show={showShareChatModal} chatId={$chatId} />
 
-<div class="sticky top-0 z-30 w-full px-1.5 py-1.5 -mb-8 flex items-center">
+<div class="sticky bg-white dark:bg-dark-800 sm:dark:bg-dark-700 top-0 z-30 w-full px-1.5 py-2 -mb-8 flex items-center">
 	<div
 		class=" bg-linear-to-b via-50% from-white via-white to-transparent dark:from-gray-900 dark:via-gray-900 dark:to-transparent pointer-events-none absolute inset-0 -bottom-7 z-[-1]"
 	></div>
@@ -54,7 +54,7 @@
 			<div
 				class="{$showSidebar
 					? 'md:hidden'
-					: ''} mr-1 self-start flex flex-none items-center text-gray-600 dark:text-gray-400"
+					: ''} mr-2 self-start flex flex-none items-center text-gray-600 dark:text-gray-400"
 			>
 				<button
 					id="sidebar-toggle-button"
@@ -80,7 +80,7 @@
 				{/if}
 			</div>
 
-			<div class="self-start flex flex-none items-center text-gray-600 dark:text-gray-400">
+			<div class="self-start flex flex-none items-center gap-1 text-gray-600 dark:text-gray-400">
 				<!-- <div class="md:hidden flex self-center w-[1px] h-5 mx-2 bg-gray-300 dark:bg-stone-700" /> -->
 				{#if shareEnabled && chat && (chat.id || $temporaryChatEnabled)}
 					<Menu
@@ -106,11 +106,8 @@
 									stroke="currentColor"
 									class="size-5"
 								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
-									/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M12 4C10.3431 4 9 5.34315 9 7C9 8.65685 10.3431 10 12 10C13.6569 10 15 8.65685 15 7C15 5.34315 13.6569 4 12 4ZM7 7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7C17 9.76142 14.7614 12 12 12C9.23858 12 7 9.76142 7 7Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M10.9684 14.0022C11.1062 14.537 10.7843 15.0823 10.2495 15.22C7.46676 15.9369 5.5 18.2894 5.5 20.9999C5.5 21.5522 5.05228 21.9999 4.5 21.9999C3.94772 21.9999 3.5 21.5522 3.5 20.9999C3.5 17.2714 6.1909 14.2002 9.75054 13.2833C10.2854 13.1455 10.8306 13.4674 10.9684 14.0022Z" fill="currentColor"></path><path d="M17.25 15.625C17.25 16.5225 16.5225 17.25 15.625 17.25C14.7275 17.25 14 16.5225 14 15.625C14 14.7275 14.7275 14 15.625 14C16.5225 14 17.25 14.7275 17.25 15.625Z" fill="currentColor"></path><path d="M21.75 15.625C21.75 16.5225 21.0225 17.25 20.125 17.25C19.2275 17.25 18.5 16.5225 18.5 15.625C18.5 14.7275 19.2275 14 20.125 14C21.0225 14 21.75 14.7275 21.75 15.625Z" fill="currentColor"></path><path d="M21.75 20.125C21.75 21.0225 21.0225 21.75 20.125 21.75C19.2275 21.75 18.5 21.0225 18.5 20.125C18.5 19.2275 19.2275 18.5 20.125 18.5C21.0225 18.5 21.75 19.2275 21.75 20.125Z" fill="currentColor"></path><path d="M17.25 20.125C17.25 21.0225 16.5225 21.75 15.625 21.75C14.7275 21.75 14 21.0225 14 20.125C14 19.2275 14.7275 18.5 15.625 18.5C16.5225 18.5 17.25 19.2275 17.25 20.125Z" fill="currentColor">
+									</path>
 								</svg>
 							</div>
 						</button>

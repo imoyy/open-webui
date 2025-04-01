@@ -115,26 +115,37 @@
 	<div class="flex-auto w-0 max-w-full pl-1">
 		{#if !($settings?.chatBubble ?? true)}
 			<div>
-				<Name>
-					{#if message.user}
-						{$i18n.t('You')}
-						<span class=" text-gray-500 text-sm font-medium">{message?.user ?? ''}</span>
-					{:else if $settings.showUsername || $_user.name !== user.name}
-						{user.name}
-					{:else}
-						{$i18n.t('You')}
-					{/if}
+				<div class="flex flex-row">
+					<div class={`inline-block flex-shrink-0 mt-1 ${($settings?.chatDirection ?? 'LTR') === 'LTR' ? 'mr-3' : 'ml-3'}`}>
+						<ProfileImage
+							src={message.user
+								? ($models.find((m) => m.id === message.user)?.info?.meta?.profile_image_url ??
+									'/user.png')
+								: (user?.profile_image_url ?? '/user.png')}
+							className={'size-7'}
+						/>
+					</div>
 
-					{#if message.timestamp}
-						<div
-							class=" self-center text-xs invisible group-hover:visible text-gray-400 font-medium first-letter:capitalize ml-0.5 translate-y-[1px]"
-						>
-							<Tooltip content={dayjs(message.timestamp * 1000).format('LLLL')}>
-								<span class="line-clamp-1">{formatDate(message.timestamp * 1000)}</span>
-							</Tooltip>
+					<Name>
+						<div class="flex items-center">
+							{#if message.user}
+								{$i18n.t('You')}
+								<span class=" text-gray-500 text-sm font-medium">{message?.user ?? ''}</span>
+							{:else if $settings.showUsername || $_user.name !== user.name}
+								{user.name}
+							{:else}
+								{$i18n.t('You')}
+							{/if}
 						</div>
-					{/if}
-				</Name>
+						{#if message.timestamp}
+							<span
+								class="self-center invisible group-hover:visible text-gray-400 text-xs font-medium uppercase ml-0.5 -mt-0.5"
+							>
+								{dayjs(message.timestamp * 1000).format($i18n.t('h:mm a'))}
+							</span>
+						{/if}
+					</Name>
+				</div>
 			</div>
 		{/if}
 

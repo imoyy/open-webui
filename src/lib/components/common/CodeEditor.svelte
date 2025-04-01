@@ -1,15 +1,15 @@
 <script lang="ts">
 	import { basicSetup, EditorView } from 'codemirror';
-	import { keymap, placeholder } from '@codemirror/view';
+	import { drawSelection, dropCursor, highlightActiveLine, highlightSpecialChars, keymap, lineNumbers, placeholder, rectangularSelection } from '@codemirror/view';
 	import { Compartment, EditorState } from '@codemirror/state';
 
-	import { acceptCompletion } from '@codemirror/autocomplete';
+	import { acceptCompletion, autocompletion, closeBrackets } from '@codemirror/autocomplete';
 	import { indentWithTab } from '@codemirror/commands';
 
-	import { indentUnit, LanguageDescription } from '@codemirror/language';
+	import { bracketMatching, defaultHighlightStyle, indentOnInput, indentUnit, syntaxHighlighting, LanguageDescription } from '@codemirror/language';
 	import { languages } from '@codemirror/language-data';
 
-	import { oneDark } from '@codemirror/theme-one-dark';
+	import { githubDark } from '@uiw/codemirror-theme-github';
 
 	import { onMount, createEventDispatcher, getContext, tick } from 'svelte';
 
@@ -129,9 +129,10 @@
 	};
 
 	let extensions = [
-		basicSetup,
+		EditorState.allowMultipleSelections.of(true),
+		syntaxHighlighting(defaultHighlightStyle, { fallback: true }),
 		keymap.of([{ key: 'Tab', run: acceptCompletion }, indentWithTab]),
-		indentUnit.of('    '),
+		indentUnit.of('  '),
 		placeholder('Enter your code here...'),
 		EditorView.updateListener.of((e) => {
 			if (e.docChanged) {
@@ -140,7 +141,8 @@
 			}
 		}),
 		editorTheme.of([]),
-		editorLanguage.of([])
+		editorLanguage.of([]),
+		EditorView.editable.of(false),
 	];
 
 	$: if (lang) {
@@ -178,7 +180,7 @@
 
 		if (isDarkMode) {
 			codeEditor.dispatch({
-				effects: editorTheme.reconfigure(oneDark)
+				effects: editorTheme.reconfigure(githubDark)
 			});
 		}
 
@@ -192,7 +194,7 @@
 						isDarkMode = _isDarkMode;
 						if (_isDarkMode) {
 							codeEditor.dispatch({
-								effects: editorTheme.reconfigure(oneDark)
+								effects: editorTheme.reconfigure(githubDark)
 							});
 						} else {
 							codeEditor.dispatch({

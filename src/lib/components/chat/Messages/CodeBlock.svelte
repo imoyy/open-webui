@@ -406,7 +406,7 @@
 </script>
 
 <div>
-	<div class="relative {className} flex flex-col rounded-lg" dir="ltr">
+	<div class="relative {className} flex flex-col rounded-lg border border-[#f9f9f9] dark:border-dark-800 shadow-md" dir="ltr">
 		{#if lang === 'mermaid'}
 			{#if mermaidHtml}
 				<SvgPanZoom
